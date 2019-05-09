@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n[10],i=0,c=1,c1=0,c2=0,pro[1000],flag=0,df=0,fact=1;
+	for(i=0;i<10;i++)
+	{
+		n[i]=c;
+		c++;
+	}
+	for(i=0;i<10;i++)
+	{
+		cout<<n[i]<<endl;
+	}
+	c=2;
+	while(df!=2)
+	{
+		df=0;flag=0;
+		for(i=0;i<10;i++)
+		{
+			if(n[i]%c==0)
+			{
+				c2=0;
+				while(n[i]%c==0)
+				{
+					c2++;
+					n[i]=n[i]/c;
+					cout<<c<<endl;
+				}
+				while(c2>0)
+				{
+					pro[c1]=c;
+					c1++;
+					c2--;
+				}
+			}
+		}
+		for(i=0;i<20;i++)
+		{
+			if(n[i]!=1)
+			{
+				flag=1;
+				df=1;
+				break;
+			}	
+		}
+		if(df!=1)
+		{
+			cout<<c<<endl;
+		df=2;
+		break;	
+		}
+		c++;
+}
+for(i=0;i<c;i++)
+{
+	fact=fact*pro[i];
+}
+cout<<fact<<endl;
+}
